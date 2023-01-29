@@ -24,9 +24,7 @@ for restaurant in restaurants:
     restaurant_name = restaurant.find('a').text
     restaurant_url = "https://www.tripadvisor.in" + \
         restaurant.find("a")['href']
-
-    # print(restaurant_name)
-    # print(restaurant_url)
+    
     driver.get(restaurant_url)
 
     soup2 = BeautifulSoup(driver.page_source, "lxml")
